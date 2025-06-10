@@ -1,0 +1,79 @@
+title: "MCP Utils Library Status"
+description: "Shared utilities for MCP servers"
+last_updated: "2025-05-28"
+status: "Stable"
+
+overview:
+  purpose: "Shared utility functions for all MCP servers"
+  type: "Library (not a server)"
+  usage: "Internal dependency for MCP servers"
+  test_framework: "Jest (Vitest migration low priority)"
+
+components:
+  - name: "BaseHandler"
+    description: "Base class for MCP tool handlers"
+    features:
+      - "Consistent error handling"
+      - "Input validation framework"
+      - "Response formatting"
+      
+  - name: "ResponseBuilder"
+    description: "Standardized MCP response creation"
+    features:
+      - "Success responses"
+      - "Error responses"
+      - "Type safety"
+      
+  - name: "TaskHelpers"
+    description: "Async task management utilities"
+    features:
+      - "Retry logic"
+      - "Timeout handling"
+      - "Progress tracking"
+      
+  - name: "Validators"
+    description: "Common validation functions"
+    features:
+      - "URL validation"
+      - "Email validation"
+      - "Required field checks"
+      
+  - name: "ResourceOperations"
+    description: "Common resource management patterns"
+    features:
+      - "CRUD operation templates"
+      - "Pagination helpers"
+      - "Filtering utilities"
+
+quality_metrics:
+  test_coverage: "Unknown (needs measurement)"
+  build_status: "✅ Passing"
+  typescript: "Clean"
+  
+testing_status:
+  framework: "Jest"
+  test_files: 4
+  vitest_migration:
+    status: "Planned"
+    priority: "Low"
+    reason: "Utility library, not critical path"
+
+usage_in_servers:
+  - "Trello MCP - Full adoption"
+  - "Postman MCP - Full adoption"
+  - "Kubernetes MCP - Partial adoption"
+  - "Keycloak MCP - Partial adoption"
+  - "Proxmox MCP - Limited adoption"
+
+planned_enhancements:
+  - "More comprehensive validators"
+  - "Rate limiting utilities"
+  - "Caching helpers"
+  - "Streaming response utilities"
+  - "Batch operation helpers"
+
+next_steps:
+  - "Measure test coverage"
+  - "Document all utilities"
+  - "Create usage examples"
+  - "Consider extracting to separate package"
